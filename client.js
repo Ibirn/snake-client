@@ -13,6 +13,15 @@ const connect = function () {
   conn.on('connect', () => {
     conn.write("Name: KMC")
   })
+  //added and removed to understand snake logic.
+  // conn.on('connect', () => {
+  //   conn.write("Move: up")
+  // })
+
+  // setInterval(() => {
+  //   conn.write("Move: up");
+  // }, 1000)
+
 
   return conn;
 }
