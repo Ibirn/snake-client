@@ -1,7 +1,7 @@
 const net = require('net');
 const { IP, PORT } = require("./constants");
 
-const connect = function () {
+const connect = function() {
   const conn = net.createConnection({
     host: IP,
     port: PORT
@@ -13,8 +13,8 @@ const connect = function () {
   });
   // added to identify our snake on connection:
   conn.on('connect', () => {
-    conn.write("Name: KMC")
-  })
+    conn.write("Name: KMC");
+  });
   //added and removed to understand snake logic.
   // conn.on('connect', () => {
   //   conn.write("Move: up")
@@ -26,9 +26,9 @@ const connect = function () {
 
 
   return conn;
-}
+};
 
 //added for exports:
 module.exports = {
   connect,
-}
+};
