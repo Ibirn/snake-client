@@ -9,6 +9,10 @@ const connect = function () {
   conn.on('data', (data) => {
     console.log('Server says: ', data);
   });
+  // added to identify our snake on connection:
+  conn.on('connect', () => {
+    conn.write("Name: KMC")
+  })
 
   return conn;
 }
